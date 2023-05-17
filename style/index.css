@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.rounded-button {
+    border-radius: 0.3em;
+    background-color: #D1A474;
+    border-color: #D1A474;
+    padding: 0.5em 2em 0.5em 2em;
+    transition: all 1s;
+  }
+
+  .rounded-button:hover {
+    background-color: #B98E58;
+    border-color: #B98E58;
+  }
+
+  .bordered-button {
+    border-radius: 0.3em;
+    border: 2px solid #D1A474;
+    color: #D1A474;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    transition: all 1s;
+  }
+
+  .bordered-button:hover {
+    background-color: #D1A474;
+    color: #fff;
+  }
+
+  .image-grid {
+    padding-left: 8em;
+    padding-right: 8em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  
+  .image-grid img {
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    height: 90%;
+    border-radius: 0.3em;
+  }
+  
+  .text-grid h1{
+    color: #B98E58;
+  }
+  
+  
+  

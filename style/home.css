@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.rounded-button {
+  border-radius: 3px;
+  background-color: #d1a474;
+  border-color: #d1a474;
+}
+
+.rounded-button:hover {
+  background-color: #b98e58;
+  border-color: #b98e58;
+}
+
+.bordered-button {
+  border-radius: 3px;
+  border: 2px solid #d1a474;
+  color: #d1a474;
+}
+
+.bordered-button:hover {
+  background-color: #d1a474;
+  color: #fff;
+}

@@ -18,8 +18,4 @@ if (preg_match('/^'.$route_regex.'$/', $uri, $params)) {
     //echo "<h1>404 not found</h1>";
 }
 
-
-
-
-
 ?>

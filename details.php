@@ -1,5 +1,5 @@
 <?php
-
+require_once "config.inc.php";
 $route = '/villa4u/details/:id';
 
 $current_url = 'http'.(isset($_SERVER['HTTPS']) ? 's' : '').'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -12,9 +12,21 @@ $route_regex = preg_replace('/:(\w+)/', '(?P<$1>[^\/]+)', $route_regex);
 // Match de URI tegen de route en haal de waarde van "id" op
 if (preg_match('/^'.$route_regex.'$/', $uri, $params)) {
     $id = $params['id'];
+
+    $result = $connection->query("SELECT * FROM `huizen` WHERE id = $id");
+
+    if ($result->num_rows > 0) {
+        $ArrayElement = $result->fetch_assoc();
+    } else {
+        header("Location: /villa4u"); die();
+    }
+    
+    
+    
+
     include_once("details_view.php");
 } else {
-    include_once("home.php");
+    header("Location: /villa4u"); die();
     //echo "<h1>404 not found</h1>";
 }
 

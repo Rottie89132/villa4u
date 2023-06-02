@@ -1,0 +1,132 @@
+h1 {
+  margin: 0;
+  color: #010101;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#contact_form {
+  max-width: 1208px;
+  max-width: 75.5rem;
+  margin: 10 auto;
+  position: absolute;
+  top: 5vh;
+  margin-left: 5em;
+  margin-right: 20w;
+}
+
+#contact_form,
+label,
+input[name="submit"] {
+  position: relative;
+}
+
+label > span,
+input,
+textarea,
+button {
+  box-sizing: border-box;
+}
+
+label {
+    display: block;
+}
+
+label > span {
+    display: none;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    font: 300 100%/1.2 Ubuntu, sans-serif;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  margin: 0 0 1em;
+  background-color: #f2f2f2;
+  outline: none;
+}
+input.invalid,
+textarea.invalid {
+  border-color: #d5144d;
+}
+textarea {
+  height: 6em;
+}
+input[type="submit"],
+button {
+  border-radius: 7px;
+  width: 300px;
+}
+
+@media screen and (min-width: 30em) {
+  #contact_form h1 {
+    margin-left: 26.3736%;
+    font-size: 3em;
+    line-height: 1.5;
+  }
+  label > span {
+    vertical-align: top;
+    display: inline-block;
+    width: 26.3736%;
+    padding: 0.5em;
+    border: 1px solid transparent;
+    text-align: left;
+  }
+  input,
+  textarea,
+  button {
+    width: 73.6263%;
+    line-height: 1.5;
+  }
+  input {
+    width: 40%;
+  }
+  textarea {
+    height: 10em;
+  }
+  input[type="submit"],
+  button {
+    margin-left: 26.3736%;
+  }
+}
+@media screen and (min-width: 48em) {
+  #contact_form {
+    text-align: justify;
+    line-height: 0;
+  }
+  #contact_form:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+  #contact_form h2 {
+    margin-left: 17.2661%;
+  }
+  #contact_form form,
+  #contact_form aside {
+    vertical-align: top;
+    display: inline-block;
+    width: 65.4676%;
+    text-align: left;
+    line-height: 1.5;
+  }
+  #contact_form aside {
+    width: 30.9353%;
+  }
+}
+
+

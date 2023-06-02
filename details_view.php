@@ -4,20 +4,21 @@
   <title></title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="../style/index.css">
+  <script src="../scripts/image.js"></script>
   <style>
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light position-sticky top-0 bg-white zindex border-bottom">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./">
         <img src="../media/logo.svg" alt="Logo" width="auto" height="60">
       </a>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../home">Home</a>
+            <a class="nav-link" href="./">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../contact">Contact</a>
@@ -73,114 +74,99 @@
   
 </main>
 
-<div class="grid ms-5 me-2 mt-5">
-  <div class="color1">
-    <h1><?=$ArrayElement["Titel"]?></h1>
+<div class="grid ms-5 me-2 mt-5 mb-5">
+  <div class="Title">
+    <h1voornaam</h1>
   </div>
-  <div class="color1">
-    <h3>Hoogste beidingen</h3>
-    <ol>
-      <li>John</li>
-      <li>Emily</li>
-      <li>Michael</li>
-      <li>Sarah</li>
-      <li>David</li>
-    </ol>
-
-
-    
-  </div>
-  <div class="color1">
+  
+  <div class="Intro">
     <h3>Inleiding</h3>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi reiciendis cum et dicta,
-      amet praesentium ea? Odio totam nesciunt molestias. Excepturi cupiditate reprehenderit quaerat.
-      Provident, maxime. Iste totam error maxime.</p>
-    <button><a href=""></a></button>
+    <p><?=$ArrayElement["Intro"]?></p>
+      <a class="btn bordered-button btn-sm w-auto me-2" href="#">Bekijk meer</a>
   </div>
-  <div class="color1">
+
+
+  <div class="bidders">
+    <h3>Hoogste beidingen</h3>
+    <P><?=$LijstBod?></p>
+  </div>
+
+  <div class="locatie">
+    <h3>Locatie</h3>
+    <iframe class="google border rounded-2 border-2" src="<?=$ArrayElement["Google_Maps"]?>" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+  <div class="bod">
     <h3>Doe een bod</h3>
     
-    <form>
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <label for="voornaam">Voornaam:</label>
-    </div>
-    <div class="col-sm-8">
-      <input type="text" id="voornaam" name="voornaam" class="form-control custom-input" required>
-    </div>
-  </div>
+    <form method="POST" action="../scripts/vestuurBid.php">
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label for="voornaam">Voornaam:</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="text" id="voornaam" name="voornaam" class="form-control custom-input" required>
+        </div>
+      </div>
 
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <label for="achternaam">Achternaam:</label>
-    </div>
-    <div class="col-sm-8">
-      <input type="text" id="achternaam" name="achternaam" class="form-control custom-input" required>
-    </div>
-  </div>
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label for="achternaam">Achternaam:</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="text" id="achternaam" name="achternaam" class="form-control custom-input" required>
+        </div>
+      </div>
 
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <label for="telefoonnummer">Telefoonnummer:</label>
-    </div>
-    <div class="col-sm-8">
-      <input type="tel" id="telefoonnummer" name="telefoonnummer" class="form-control custom-input" required>
-    </div>
-  </div>
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label for="telefoonnummer">Telefoonnummer:</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="tel" id="telefoonnummer" name="telefoonnummer" class="form-control custom-input" required>
+        </div>
+      </div>
 
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <label for="email">Email:</label>
-    </div>
-    <div class="col-sm-8">
-      <input type="email" id="email" name="email" class="form-control custom-input" required>
-    </div>
-  </div>
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label for="email">Email:</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="email" id="email" name="email" class="form-control custom-input" required>
+        </div>
+      </div>
 
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <label for="bod">Bod:</label>
-    </div>
-    <div class="col-sm-8">
-      <input type="number" id="bod" name="bod" class="form-control custom-input" required>
-    </div>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Opslaan</button>
-</form>
-
-
+      <div class="row mb-3">
+        <div class="col-sm-4">
+          <label for="bod">Bod:</label>
+        </div>
+        <div class="col-sm-8">
+          <input type="number" id="bod" name="bod" class="form-control custom-input" required>
+          <input type="hidden" name="idHuis" value="<?=$id?>">
+          <p class="mt-1 text-danger"><?=$Melding?></p>
+          
+        </div>
+      </div>
 
 
 
-
-  </div>
-  <div class="color1">
-    <h3>Locatie</h3>
-  </div>
-  <div class="color1">
-    
+      <button type="submit" class="btn btn-primary rounded-button btn-sm w-auto">Opslaan</button>
+    </form>
   </div>
 </div>
-
-
-  <!-- <div class="container justify-content-between">
-    <div class="mt-5 row g-2 g-lg-3 gutter-3">
-      <div class="col-md-6 px-2 color1">
-        hello-1
+<div class="bg-gray">
+  <div class="px-5 py-4">
+    <h3 class="pb-2">Vergelijkbare huizen</h3>
+    <div class="d-flex justify-content-between mt-2">
+      <div class="">
+        <img class="card-img border rounded-2 border-2 link" src="../media/<?=$Image1?>.png" id="<?=$Image1?>">
       </div>
-      <div class="col-md-6 color2">
-        hello-2
-      </div>
-      <div class="col-md-6 color3">
-        hello-3
-      </div>
-      <div class="col-md-6 color4">
-        hello-4
-      </div>
+      <div class="">
+        <img class="card-img border rounded-2 border-2 link" src="../media/<?=$Image2?>.png" id="<?=$Image2?>">
+        </div>
     </div>
-  </div> -->
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

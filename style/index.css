@@ -160,4 +160,38 @@ body {
   background-color: #f2f2f2;
 }
 
+@media only screen and (max-width: 992px) { 
+  .image-grid {
+    padding-left: 4em;
+    padding-right: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
 
+  .grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    'Title'
+    "Intro"
+    "bidders"
+    "bod"
+    "locatie";
+    gap: 1em;
+    row-gap: 4em;
+    column-gap: 5em;
+  }
+
+  .bg-gray {
+    background-color: #f6f6f6;
+    height: 17em;
+    overflow: hidden;
+  }
+
+  .Intro {
+    max-width: 73%;
+  }
+
+}

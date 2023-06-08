@@ -44,7 +44,7 @@
           <img class="" src="../media/<?=$id?>-2.png" alt="Villa Slideshow 1"/>
           <div class="carousel-caption top-0 mt-5">
             <h1 class="hero-header text-white">Villa Slideshow</h1>
-            <p class="btn btn-primary rounded-button btn-sm w-auto">Doe een bod</p>
+            <a href="#bod" class="btn btn-primary rounded-button btn-sm w-auto">Doe een bod</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -93,10 +93,10 @@
 
   <div class="locatie">
     <h3>Locatie</h3>
-    <iframe class="google border rounded-2 border-2" src="<?=$ArrayElement["Google_Maps"]?>" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="google border rounded-2 border-2" src="<?=$ArrayElement["Google_Maps"]?>" width="95%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   
-  <div class="bod">
+  <div id="bod" class="bod">
     <h3>Doe een bod</h3>
     
     <form method="POST" action="../scripts/vestuurBid.php">

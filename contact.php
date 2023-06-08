@@ -36,10 +36,11 @@
       </div>
     </div>
   </nav>
+  <div class="form-container">
   <section id="contact_form">
   <h1>Neem contact met ons op</h1>
   <h3>Heeft u en vraag of een opmerking? Dan kunt u contact met ons opnemen via dit formulier.</h3>
-  <form id="contact" name="contact" accept-charset="utf-8">
+  <form id="contact" name="contact" accept-charset="utf-8" method="POST">
     <label><span>Voornaam:</span><input name="Voornaam" type="text" /></label>
     <label><span>Achternaam:</span><input name="Achternaam" type="text" /></label>
     <label><span>Telefoon:</span><input name="Telfoon" type="tel" /></label>
@@ -47,6 +48,7 @@
     <label><span>Vraag/opmerking:</span><textarea name="Vraag"  ></textarea></label>
     <input class="btn btn-primary rounded-button btn-sm w-auto" name="submit" type="submit" value="Send"/>
   </form>
+  </div>
 </section>
 
 

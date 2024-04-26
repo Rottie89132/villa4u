@@ -72,6 +72,10 @@ body {
   filter: blur(20px);
 }
 
+.link-img {
+  transition: all 0.3s ease-in-out;
+}
+
 .link-img:hover {
   scale: 1.1;
   cursor: pointer;

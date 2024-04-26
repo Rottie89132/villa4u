@@ -2,6 +2,7 @@
 <html>
 <head>
   <title></title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -48,13 +49,13 @@
         stijl en gastvrijheid.
       </h6>
     </div>
-    <div class="row row-cols-3 image-grid justify-content-center">
-      <img src="./media/1.png" id="1" class="link-img col">
-      <img src="./media/2.png" id="2" class="link-img col">
-      <img src="./media/3.png" id="3" class="link-img col">
-      <img src="./media/4.png" id="4" class="col">
-      <img src="./media/5.png" id="5" class="col">
-      <img src="./media/6.png" id="6" class="col">
+    <div class="row justify-content-center">
+      <img src="./media/1.png" id="1" class="link-img col-6 col-md-4 mb-3">
+      <img src="./media/2.png" id="2" class="link-img col-6 col-md-4 mb-3">
+      <img src="./media/3.png" id="3" class="link-img col-6 col-md-4 mb-3">
+      <img src="./media/4.png" id="4" class="col-6 col-md-4 mb-3">
+      <img src="./media/5.png" id="5" class="col-6 col-md-4 mb-3">
+      <img src="./media/6.png" id="6" class="col-6 col-md-4 mb-3">
     </div>
   </div>
 </main>
